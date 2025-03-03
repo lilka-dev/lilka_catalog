@@ -1,0 +1,20 @@
+name: example lilka app
+sourcecode:
+  type: git
+  location:
+    origin: https://github.com/and3rson/lilka.git
+executionfile:
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/and3rson/lilka/refs/heads/main/hardware/v2/main.kicad_pro
+short_description: BMI160 module
+description: "@DESCRIPTION.md"
+changelog: "@CHANGELOG.md"
+author: "@black-ghost-off"
+license: MIT
+keira_version: 1.0.0
+icon: screenshot1.png
+screenshots:
+  - screenshot1.png
+
+  

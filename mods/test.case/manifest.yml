@@ -1,0 +1,22 @@
+name: simplecase
+sources:
+  type: git
+  location:
+    origin: https://github.com/and3rson/lilka/tree/main/hardware/v2
+modfiles:
+  - location: https://raw.githubusercontent.com/and3rson/lilka/refs/heads/main/hardware/v2/main.kicad_pro
+    type: kicad_pro
+  - location: https://raw.githubusercontent.com/and3rson/lilka/refs/heads/main/hardware/v2/main.kicad_sch
+    type: kicad_sch
+  - location: https://raw.githubusercontent.com/and3rson/lilka/refs/heads/main/hardware/v2/main.kicad_pcb
+    type: kicad_pcb
+  - location: https://raw.githubusercontent.com/and3rson/lilka/refs/heads/main/hardware/v2/main.kicad_mod
+    type: kicad_mod
+short_description: BMI160 module
+description: "@DESCRIPTION.md"
+changelog: "@CHANGELOG.md"
+author: "@black-ghost-off"
+license: MIT
+icon: screenshot1.png
+screenshots:
+  - screenshot1.png
