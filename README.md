@@ -1,10 +1,12 @@
 # Lilka Repository Static Site
 
-A static website for browsing Lilka apps and mods.
+A static website for browsing Lilka apps and mods with automatic deployment to GitHub Pages.
 
 ## Features
 
 - **Dual Browse Mode**: Switch between Apps and Mods tabs
+- **Page Navigation**: Direct page number navigation with smart pagination
+- **4-Column Grid Layout**: Displays 4 apps per row (responsive on smaller screens)
 - **Detailed Modal Views**: Click any item to see full details including:
   - Description and changelog (markdown formatted)
   - Author information
@@ -13,6 +15,7 @@ A static website for browsing Lilka apps and mods.
   - Icons and screenshots
 - **Responsive Design**: Works on desktop and mobile devices
 - **Dark Theme**: Modern dark UI with smooth animations
+- **Auto-Deploy**: GitHub Actions workflow for automatic builds and deployment
 
 ## File Structure
 
@@ -66,10 +69,38 @@ python3 -m http.server 8000
 
 Then visit: `http://localhost:8000`
 
-### Deployment
+### GitHub Pages Deployment (Automatic)
 
-Upload the entire `build/` directory to any static hosting service:
-- GitHub Pages
+The repository includes a GitHub Actions workflow that automatically builds and deploys to GitHub Pages on every push to the `main` branch.
+
+**Setup Steps:**
+
+1. **Enable GitHub Pages:**
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Under "Build and deployment", set:
+     - **Source**: GitHub Actions
+   
+2. **Push to main branch:**
+   ```bash
+   git add .
+   git commit -m "Setup GitHub Pages deployment"
+   git push origin main
+   ```
+
+3. **Wait for deployment:**
+   - Go to the "Actions" tab in your repository
+   - Watch the "Build and Deploy to GitHub Pages" workflow run
+   - Once complete, your site will be live at: `https://<username>.github.io/<repository-name>/`
+
+**What the workflow does:**
+- Installs Python and dependencies (PyYAML, requests)
+- Runs `build.py --build` to generate JSON files from manifests
+- Copies static site files (HTML, CSS, JS) to build directory
+- Deploys the `build/` folder to GitHub Pages
+
+**Manual Deployment:**
+You can also deploy manually by uploading the `build/` directory to:
 - Netlify
 - Vercel
 - AWS S3 + CloudFront
