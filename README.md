@@ -1,11 +1,10 @@
 # Lilka Repository Static Site
 
-A modern, responsive static website for browsing Lilka apps and mods.
+A static website for browsing Lilka apps and mods.
 
 ## Features
 
 - **Dual Browse Mode**: Switch between Apps and Mods tabs
-- **Pagination**: Navigate through multiple pages of content
 - **Detailed Modal Views**: Click any item to see full details including:
   - Description and changelog (markdown formatted)
   - Author information
@@ -63,14 +62,6 @@ Simply open `index.html` in a web browser. However, due to CORS restrictions, yo
 # Using Python 3
 cd build
 python3 -m http.server 8000
-
-# Using Node.js http-server
-cd build
-npx http-server -p 8000
-
-# Using PHP
-cd build
-php -S localhost:8000
 ```
 
 Then visit: `http://localhost:8000`

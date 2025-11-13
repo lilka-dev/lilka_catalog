@@ -206,10 +206,14 @@ def check_manifest(src, type) -> dict:
         
 
 def scan_apps_folder() -> list[str]:
-    return [d for d in os.listdir('./apps') if os.path.isdir(os.path.join('./apps', d))]
+    folders_list = [d for d in os.listdir('./apps') if os.path.isdir(os.path.join('./apps', d))]
+    folders_list = sorted(folders_list)
+    return folders_list
 
 def scan_mods_folder() -> list[str]:
-    return [d for d in os.listdir('./mods') if os.path.isdir(os.path.join('./mods', d))]
+    folder_list = [d for d in os.listdir('./mods') if os.path.isdir(os.path.join('./mods', d))]
+    folder_list = sorted(folder_list)
+    return folder_list
 
 def process_apps_folder(apps):
     for app in apps:
