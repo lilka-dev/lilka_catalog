@@ -1,0 +1,17 @@
+name: Хрестики-нулики для Лілки
+sources:
+  type: git
+  location:
+    origin: https://github.com/sverdlyuk/tic-tac-toe-lilka
+executionfile:
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/sverdlyuk/tic-tac-toe-lilka/refs/heads/main/tic_tac_toe.lua
+short_description: Класична гра "Хрестики-нулики" з AI для платформи Лілка
+description: "@DESCRIPTION.md"
+author: "@sverdlyuk"
+license: NONE
+keira_version: 1.0.0
+icon: image1.png
+screenshots:
+  - image1.png

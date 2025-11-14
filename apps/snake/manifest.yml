@@ -1,0 +1,19 @@
+name: Змійка (LUA)
+sources:
+  type: git
+  location:
+    origin: https://github.com/sverdlyuk/lilka-snake
+executionfile:
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/sverdlyuk/lilka-snake/refs/heads/main/snake.lua
+short_description: Класична гра "Змійка" у псевдографічному стилі для Kiera OS
+description: "@DESCRIPTION.md"
+author: "@sverdlyuk"
+license: NONE
+keira_version: 1.0.0
+icon: image1.png
+screenshots:
+  - image1.png
+  - image2.png
+  - image3.png

@@ -292,13 +292,13 @@ def check_manifest(src, type) -> dict:
                 manifest['description'] = open(os.path.join(type+"s", src, manifest['description'][1:]), 'r').read()
             except Exception as e:
                 add_warning(src, "file_read_error", f"Failed to read description file: {str(e)}", type)
-                return None
+                manifest['description'] = ""
         else:
             pass
         print(f"Description: {manifest['description']}")
     else:
-        add_warning(src, "missing_field", "Description not found in manifest file", type)
-        return None
+        manifest['description'] = ""
+        print("Description: (not provided)")
     
     if 'short_description' in manifest:
         if manifest['short_description'][0] == '@':
@@ -320,13 +320,13 @@ def check_manifest(src, type) -> dict:
                 manifest['changelog'] = open(os.path.join(type+"s", src, manifest['changelog'][1:]), 'r').read()
             except Exception as e:
                 add_warning(src, "file_read_error", f"Failed to read changelog file: {str(e)}", type)
-                return None
+                manifest['changelog'] = ""
         else:
             pass
         print(f"Changelog: {manifest['changelog']}")
     else:
-        add_warning(src, "missing_field", "Changelog not found in manifest file", type)
-        return None
+        manifest['changelog'] = ""
+        print("Changelog: (not provided)")
 
     if 'author' in manifest:
         print(f"Author: {manifest['author']}")
