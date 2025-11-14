@@ -1,21 +1,15 @@
-# Lilka Repository Static Site
+# Lilka Catalog
 
 A static website for browsing Lilka apps and mods.
 
 ## Features
 
-- **Dual Browse Mode**: Switch between Apps and Mods tabs
-- **Page Navigation**: Direct page number navigation with smart pagination
-- **4-Column Grid Layout**: Displays 4 apps per row (responsive on smaller screens)
 - **Detailed Modal Views**: Click any item to see full details including:
   - Description and changelog (markdown formatted)
   - Author information
   - Download links for execution files (apps) or mod files (mods)
   - Source repository links
   - Icons and screenshots
-- **Responsive Design**: Works on desktop and mobile devices
-- **Dark Theme**: Modern dark UI with smooth animations
-- **Auto-Deploy**: GitHub Actions workflow for automatic builds and deployment
 
 ## File Structure
 
@@ -261,13 +255,6 @@ cp site/{index.html,styles.css,script.js} build/
 }
 ```
 
-## Browser Compatibility
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- ES6+ JavaScript features
-- CSS Grid and Flexbox
-- Fetch API for AJAX requests
-
 ## License
 
-Part of the Lilka project.
+MIT
