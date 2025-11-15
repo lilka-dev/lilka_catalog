@@ -1,0 +1,13 @@
+name: Rustilka (Rust)
+sources:
+  type: git
+  location:
+    origin: https://gitlab.com/imbiruss/rustilka
+short_description: Фреймворк підтримки мови Rust для розробки прошивок на Лілці V2
+description: "@DESCRIPTION.md"
+author: "@imbiruss"
+license: MIT
+keira_version: 1.0.0
+icon: image.png
+screenshots:
+  - image.png

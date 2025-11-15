@@ -1,0 +1,13 @@
+name: ESPHome LVGL (YAML)
+sources:
+  type: git
+  location:
+    origin: https://pastebin.com/aNXqw5bQ
+short_description: ESPHome конфігурація для Lilka з підтримкою LVGL графічного фреймворку
+description: "@DESCRIPTION.md"
+author: "@sverdlyuk"
+license: NONE
+keira_version: 1.0.0
+icon: image.png
+screenshots:
+  - image.png

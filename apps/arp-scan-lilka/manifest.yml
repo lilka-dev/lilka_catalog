@@ -1,0 +1,18 @@
+name: ARP сканер Kiera OS (Lilka) (C/C++)
+sources:
+  type: git
+  location:
+    origin: https://github.com/sverdlyuk/ARP-scan-Lilka
+executionfile:
+  type: archive
+  location:
+    origin: https://github.com/sverdlyuk/ARP-scan-Lilka/archive/refs/tags/v0.1.zip
+short_description: Проста утиліта для сканування локальної мережі за допомогою ARP
+description: "@DESCRIPTION.md"
+author: "@sverdlyuk"
+license: NONE
+keira_version: 1.0.0
+icon: image1.png
+screenshots:
+  - image1.png
+  - image2.png

@@ -1,0 +1,18 @@
+name: Lilradio (C/C++)
+sources:
+  type: git
+  location:
+    origin: https://github.com/aisaiev/lilradio
+executionfile:
+  type: binary
+  location:
+    origin: https://github.com/aisaiev/lilradio/releases/download/v1/lilradio.bin
+short_description: FM радіо приймач модуль для Лілки
+description: "@DESCRIPTION.md"
+author: "@aisaiev"
+license: NONE
+keira_version: 1.0.0
+icon: image1.png
+screenshots:
+  - image1.png
+  - image2.png

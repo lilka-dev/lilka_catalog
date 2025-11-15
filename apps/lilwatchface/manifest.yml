@@ -1,0 +1,17 @@
+name: Lilwatchface (LUA)
+sources:
+  type: git
+  location:
+    origin: https://github.com/aisaiev/lilwatchface
+executionfile:
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/aisaiev/lilwatchface/refs/heads/main/lilwatchface.lua
+short_description: JSON-like watchface app for Лілка
+description: "@DESCRIPTION.md"
+author: "@aisaiev"
+license: NONE
+keira_version: 1.0.0
+icon: image.png
+screenshots:
+  - image.png

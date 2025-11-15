@@ -1,0 +1,17 @@
+name: Incident LightMeter for Lilka (LUA)
+sources:
+  type: git
+  location:
+    origin: https://github.com/imaggg/lightmeter
+executionfile:
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/imaggg/lightmeter/refs/heads/main/lightmeter_pub.lua
+short_description: Базова версія експонометра для вимірювання падаючого світла
+description: "@DESCRIPTION.md"
+author: "@imaggg"
+license: GPL-3.0
+keira_version: 1.0.0
+icon: image.png
+screenshots:
+  - image.png

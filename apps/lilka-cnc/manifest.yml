@@ -1,0 +1,19 @@
+name: Lilka CNC (C/C++)
+sources:
+  type: git
+  location:
+    origin: https://github.com/bossly/lilka_cnc
+executionfile:
+  type: binary
+  location:
+    origin: https://github.com/bossly/lilka_cnc/releases/download/0.0.1/lilcnc_0.0.1_alpha.zip
+short_description: Кастомна прошивка для керування CNC на базі GRBL
+description: "@DESCRIPTION.md"
+author: "@bossly"
+license: GPL-2.0
+keira_version: 1.0.0
+icon: image1.png
+screenshots:
+  - image1.png
+  - image2.png
+  - image3.png

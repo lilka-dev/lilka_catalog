@@ -1,0 +1,19 @@
+name: Matrix Rain (LUA)
+sources:
+  type: git
+  location:
+    origin: https://github.com/k3kukua/lilka-matrix-rain
+executionfile:
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/k3kukua/lilka-matrix-rain/refs/heads/main/matrix_rain.lua
+short_description: Анімована графічна заставка "Matrix Rain" для Kiera OS
+description: "@DESCRIPTION.md"
+author: "@k3kukua"
+license: NONE
+keira_version: 1.0.0
+icon: image1.png
+screenshots:
+  - image1.png
+  - image2.png
+  - image3.png

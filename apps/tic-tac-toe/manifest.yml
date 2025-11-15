@@ -1,4 +1,4 @@
-name: Хрестики-нулики для Лілки
+name: Хрестики-нулики для Лілки (LUA)
 sources:
   type: git
   location:

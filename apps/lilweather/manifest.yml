@@ -1,0 +1,20 @@
+name: Погода (lilweather) (LUA)
+sources:
+  type: git
+  location:
+    origin: https://github.com/burylo/lilweather
+executionfile:
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/burylo/lilweather/refs/heads/main/weather.lua
+  type: lua
+  location:
+    origin: https://raw.githubusercontent.com/burylo/lilweather/refs/heads/main/json.lua
+short_description: Проста програма де відображається час та температура в певному місті
+description: "@DESCRIPTION.md"
+author: "@burylo"
+license: NONE
+keira_version: 1.0.0
+icon: image.png
+screenshots:
+  - image.png

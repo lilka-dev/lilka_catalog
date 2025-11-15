@@ -1,0 +1,17 @@
+name: LoRa Transmitter (C/C++)
+sources:
+  type: git
+  location:
+    origin: https://github.com/Kolodieiev/lora_transmitter
+executionfile:
+  type: binary
+  location:
+    origin: https://github.com/Kolodieiev/lora_transmitter/raw/refs/heads/main/bin/lilka_v2.bin
+short_description: Модуль рації на ESP32 з шифруванням AES256 для Lilka v2
+description: "@DESCRIPTION.md"
+author: "@Kolodieiev"
+license: GPL-3.0
+keira_version: 1.0.0
+icon: image.png
+screenshots:
+  - image.png

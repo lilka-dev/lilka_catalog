@@ -1,0 +1,16 @@
+name: Meowui (C/C++)
+sources:
+  type: git
+  location:
+    origin: https://github.com/Kolodieiev/meowui
+short_description: Фреймворк для розробки прошивок для ESP32 та ESP32-S3
+description: "@DESCRIPTION.md"
+author: "@Kolodieiev"
+license: GPL-3.0
+keira_version: 1.0.0
+icon: image1.png
+screenshots:
+  - image1.png
+  - image2.png
+  - image3.png
+  - image4.png

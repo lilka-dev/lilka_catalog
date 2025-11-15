@@ -1,0 +1,17 @@
+name: Li'l Video (C/C++)
+sources:
+  type: git
+  location:
+    origin: https://github.com/noisedsn/lilvideo
+executionfile:
+  type: binary
+  location:
+    origin: https://github.com/noisedsn/lilvideo/raw/main/player.bin
+short_description: Маленький відеоплеєр для Лілки з підтримкою MJPEG + AAC
+description: "@DESCRIPTION.md"
+author: "@noisedsn"
+license: NONE
+keira_version: 1.0.0
+icon: image.png
+screenshots:
+  - image.png
