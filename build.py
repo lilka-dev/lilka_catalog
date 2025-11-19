@@ -35,7 +35,7 @@ MIN_ICON_SIZE = 64  # For ESP32-S3 display
 JPEG_QUALITY = 85
 
 def generate_min_icon(icon_path, output_path):
-    """Generate 64x64 minimized icon for ESP32-S3"""
+    """Generate 64x64 minimized icon for ESP32-S3 in RGB565 binary format"""
     try:
         with Image.open(icon_path) as img:
             # Convert to RGB if needed
@@ -48,13 +48,33 @@ def generate_min_icon(icon_path, output_path):
                 else:
                     background.paste(img)
                 img = background
+            elif img.mode != 'RGB':
+                img = img.convert('RGB')
             
             # Resize to 64x64
             img_resized = img.resize((MIN_ICON_SIZE, MIN_ICON_SIZE), Image.Resampling.LANCZOS)
             
-            # Save as optimized PNG
-            img_resized.save(output_path, 'PNG', optimize=True)
-            print(f"  Generated min icon: {output_path} (64x64)")
+            # Convert to RGB565 binary format
+            pixels = img_resized.load()
+            rgb565_data = bytearray()
+            
+            for y in range(MIN_ICON_SIZE):
+                for x in range(MIN_ICON_SIZE):
+                    r, g, b = pixels[x, y]
+                    # Convert RGB888 to RGB565
+                    r5 = (r >> 3) & 0x1F
+                    g6 = (g >> 2) & 0x3F
+                    b5 = (b >> 3) & 0x1F
+                    rgb565 = (r5 << 11) | (g6 << 5) | b5
+                    # Write as little-endian 16-bit value
+                    rgb565_data.append(rgb565 & 0xFF)
+                    rgb565_data.append((rgb565 >> 8) & 0xFF)
+            
+            # Save binary file
+            with open(output_path, 'wb') as f:
+                f.write(rgb565_data)
+            
+            print(f"  Generated min icon: {output_path} (64x64 RGB565, {len(rgb565_data)} bytes)")
     except Exception as e:
         print(f"  Warning: Could not generate min icon: {e}")
 
@@ -172,11 +192,10 @@ def gen_static_folder(manifest, type, output_dir) -> dict:
                     print(f"WARNING: Icon not found, skipping: {manifest['icon']}")
                     icon_dest_path = None
             
-            # Generate minimized 64x64 icon for ESP32-S3
+            # Generate minimized 64x64 icon for ESP32-S3 in RGB565 format
             if icon_dest_path and os.path.exists(icon_dest_path):
                 icon_name = os.path.splitext(manifest['icon'])[0]
-                icon_ext = os.path.splitext(manifest['icon'])[1]
-                min_icon_name = f"{icon_name}_min.png"
+                min_icon_name = f"{icon_name}_min.bin"
                 min_icon_path = os.path.join(static_files_path, min_icon_name)
                 generate_min_icon(icon_dest_path, min_icon_path)
                 manifest['icon_min'] = min_icon_name
