@@ -147,7 +147,7 @@ def gen_static_folder(manifest, type, output_dir) -> dict:
 
     if type == "app" and manifest.get('executionfile'):
         manifest['executionfile']['location'] = download_file(manifest['executionfile']['location'], static_files_path)
-    elif type == "mod":
+    elif type == "mod" and manifest.get('modfiles'):
         for file in manifest['modfiles']:
             file['location'] = download_file(file['location'], static_files_path)
     else:
@@ -251,7 +251,9 @@ def process_manifest(manifest, type) -> None:
             if manifest.get("executionfile"):
                 full_data["executionfile"] = manifest["executionfile"]
         elif type == "mod":
-            full_data["modfiles"] = manifest["modfiles"]
+            # Only include modfiles if they exist
+            if manifest.get("modfiles"):
+                full_data["modfiles"] = manifest["modfiles"]
         
         with open(os.path.join(output_dir, 'index.json'), 'w', encoding='utf-8') as file:
             json.dump(full_data, file, indent=2, ensure_ascii=False)
@@ -443,8 +445,8 @@ def check_manifest(src, type) -> dict:
         if 'modfiles' in manifest:
             print(f"Modfile: {manifest['modfiles']}")
         else:
-            add_warning(src, "missing_field", "modfiles not found in manifest file", type)
-            return None
+            add_warning(src, "missing_field", "modfiles not found in manifest file (optional)", type)
+            manifest['modfiles'] = []
     else:
         add_warning(src, "unknown_type", f"Unknown type: {type}", type)
         return None

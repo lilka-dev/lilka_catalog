@@ -10,7 +10,3 @@ sources:
 screenshots:
   - image1.png
   - image2.png
-modfiles:
-  - name: "STL файли всіх версій корпусу"
-    location:
-      origin: https://www.printables.com/model/1120079-lilcase/files

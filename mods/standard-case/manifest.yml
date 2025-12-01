@@ -11,7 +11,3 @@ screenshots:
   - image1.png
   - image2.png
   - image3.png
-modfiles:
-  - name: "STL файли корпусу"
-    location:
-      origin: https://www.printables.com/model/1189054-case-for-lilka-dev-board/files
